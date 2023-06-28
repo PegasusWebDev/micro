@@ -24,6 +24,7 @@ class Soundtrack {
   }
   playRandom(){
     var track = this.tracks[Math.floor(Math.random()*this.tracks.length)];
+    if(!track) return;
     this.id = track.play();
     this.playing = track;
     track.on('end', ()=>{
@@ -58,60 +59,37 @@ class Soundtrack {
 }
 
 window.music.soundtracks.start = new Soundtrack([
-  //What Are You Doing Here?
-  new Howl({
-    src: ['https://cdn.glitch.global/e78bfab2-2ff2-4853-bc78-2a1f4fd1f0ab/what%20are%20you%20doing%20here.mp3']
-  })
+  
 ])
 
 window.music.soundtracks.safe = new Soundtrack ([
-  //The Safe Zone
-  new Howl({
-    src: ['https://cdn.glitch.global/e78bfab2-2ff2-4853-bc78-2a1f4fd1f0ab/the%20safe%20zone.mp3?v=1664325505657']
-  }),
-  //Economy
-  new Howl({
-    src: ['https://cdn.glitch.global/e78bfab2-2ff2-4853-bc78-2a1f4fd1f0ab/economy.mp3?v=1664325502003']
-  })
+  
 ])
 
 window.music.soundtracks.world = new Soundtrack([
-  //An Absolutely Abominable Placeholder
+  //March of the Foreigners
   new Howl({
-    src: ['https://cdn.glitch.global/e78bfab2-2ff2-4853-bc78-2a1f4fd1f0ab/an%20absolutely%20abominable%20placeholder.mp3']
-  }),
-  //The Other Exploration Theme
-  new Howl({
-    src: ['https://cdn.glitch.global/e78bfab2-2ff2-4853-bc78-2a1f4fd1f0ab/the%20other%20exploration%20theme.mp3']
+    src: ['assets/ost/March%20of%20the%20Foreigners.wav']
   })
 ]);
 
 window.music.soundtracks.fight = new Soundtrack([
-  //Good Yet Terrible Advice
-  new Howl({
-    src: ['https://cdn.glitch.global/e78bfab2-2ff2-4853-bc78-2a1f4fd1f0ab/good%20yet%20terrible%20advice.mp3']
-  })
+  
 ]);
 
 window.music.soundtracks.boss = new Soundtrack([
-  //It's The Boss!
+  //The Wager With Death
   new Howl({
-    src: ['https://cdn.glitch.global/e78bfab2-2ff2-4853-bc78-2a1f4fd1f0ab/its%20the%20boss.mp3?v=1664402371844']
+    src: ['assets/ost/The%20Wager%20With%20Death.wav']
   })
 ]);
 
 window.music.soundtracks.death = new Soundtrack([
-  //Now You Are Dead
-  new Howl({
-    src: ['https://cdn.glitch.global/e78bfab2-2ff2-4853-bc78-2a1f4fd1f0ab/now%20you%20are%20dead.mp3']
-  })
+  
 ]);
 
 window.music.soundtracks.quest = new Soundtrack([
-  //On A Quest
-  new Howl({
-    src: ['https://cdn.glitch.global/e78bfab2-2ff2-4853-bc78-2a1f4fd1f0ab/on%20a%20quest.mp3?v=1664406071824']
-  })
+  
 ]);
 
 export default window.music;
